@@ -1,0 +1,40 @@
+@import 'at-digital-components/sass/index';
+@import '/src/assets/scss/main-styles';
+
+.subtitle {
+    padding: 1.875rem 0.313rem 0 0;
+    display: flex;
+    align-items: center;
+    an-avatar {
+        padding-right: 0.625rem;
+    }
+    .icon {
+      a {
+        color: $un-primary-60;
+      }
+        padding-right: 0.625rem;
+    }
+}
+
+.hr-subtitle {
+    padding: 0 0.313rem;
+    hr {
+        margin: 0;
+        border-style: none;
+        border-top: solid 1px $un-divider-hr;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .subtitle {
+        margin: 0 1.313rem;
+        padding-right: 0;
+        &.hidden {
+            display: none;
+        }
+    }
+    .hr-subtitle {
+        margin: 0 1rem;
+        display: none;
+    }
+}

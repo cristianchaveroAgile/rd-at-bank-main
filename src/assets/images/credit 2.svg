@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="31px" viewBox="0 0 45 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>credit 2</title>
+    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="assets" transform="translate(-130.000000, -466.000000)" stroke-width="2">
+            <g id="credit-2" transform="translate(131.000000, 467.000000)">
+                <path d="M43,11 L31,11 L31,3 L38.9845,3 C39.2842,3 39.57715,3.09584 39.8254,3.27504 C40.07365,3.4544 40.2658,3.7088 40.3771,4.00576 L43,11 Z" id="Path" stroke="#115DFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                <line x1="0" y1="15" x2="31" y2="15" id="Path" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></line>
+                <path d="M33.5,29 C35.98535,29 38,26.98535 38,24.5 C38,22.01465 35.98535,20 33.5,20 C31.01465,20 29,22.01465 29,24.5 C29,26.98535 31.01465,29 33.5,29 Z" id="Path" stroke="#FFFFFF"></path>
+                <path d="M10.5,29 C12.98535,29 15,26.98535 15,24.5 C15,22.01465 12.98535,20 10.5,20 C8.014725,20 6,22.01465 6,24.5 C6,26.98535 8.014725,29 10.5,29 Z" id="Path" stroke="#FFFFFF"></path>
+                <line x1="29" y1="24" x2="15" y2="24" id="Path" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></line>
+                <path d="M5.425,24 L1.55,24 C1.138909,24 0.7446665,23.8419 0.4539795,23.56065 C0.163308,23.2794 0,22.8978 0,22.5 L0,1.5 C0,1.10217 0.163308,0.720645 0.4539795,0.439335 C0.7446665,0.15804 1.138909,0 1.55,0 L31,0 L31,20.10285" id="Path" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M31,20.9585111 L31,11 L43,11 L43,23.4444444 C43,23.8569778 42.8419,24.2527111 42.56065,24.5443778 C42.2794,24.8360444 41.8978,25 41.5,25 L37.75,25" id="Path" stroke="#115DFF" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

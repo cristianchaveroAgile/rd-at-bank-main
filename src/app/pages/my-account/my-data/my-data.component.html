@@ -1,0 +1,51 @@
+<!-- Se imprime la información obtenida del cliente y guardada localmente en la variable "client" -->
+<div class="card at-radius-m row row-xs">
+    <div class="col c-md-12 c-6 gral-sec">
+        <div class="col-content left-box">
+            <p class="at-prod-subtitle-2 bold title">Generales</p>
+            <at-form-field [appearance]="'standard'" [theme]="'primary'" class="at-form-field-label-float">
+                <div atLabel class="at-prod-caption">Nombre</div>
+                <input type="text" atInput class="at-prod-body-1" value="{{client.nombre_cliente}}" disabled="disabled">
+            </at-form-field>
+
+            <at-form-field [appearance]="'standard'" [theme]="'primary'" class="at-form-field-label-float">
+                <div atLabel class="at-prod-caption">RFC</div>
+                <input type="text" atInput class="at-prod-body-1" value="{{client.rfc}}" disabled="disabled">
+            </at-form-field>
+
+            <at-form-field [appearance]="'standard'" [theme]="'primary'" class="at-form-field-label-float">
+                <div atLabel class="at-prod-caption">Dirección</div>
+                <input type="text" atInput class="at-prod-body-1" value="{{client.direccion}}" rows="3" cols="20" disabled="disabled">
+            </at-form-field>
+            <p class="at-prod-caption left-alert title message">Tus datos generales solo pueden ser modificados por tu asesor.</p>
+        </div>
+    </div>
+    <div class="col c-md-12 c-6">
+        <div class="r-box-container">
+            <div class="separator"></div>
+            <div class="col-content right-box">
+                <p class="at-prod-subtitle-2 bold title">De contacto</p>
+                <at-form-field [appearance]="'standard'" [theme]="'primary'" class="at-form-field-label-float">
+                    <div atLabel class="at-prod-caption">Teléfono</div>
+                    <!-- Se imprime el valor enmascarado del teléfono.-->
+                    <input type="text" atInput class="at-prod-body-1" value="{{phone}}" disabled="disabled">
+                </at-form-field>
+                <at-form-field [appearance]="'standard'" [theme]="'primary'" class="at-form-field-label-float">
+                    <div atLabel class="at-prod-caption">Correo</div>
+                    <!-- Se imprime el valor enmascarado del correo electrónico -->
+                    <input type="text" class="at-prod-body-1" atInput value="{{mail}}" disabled="disabled">
+                </at-form-field>
+                <div class="edit-alert">
+                    <div class="icon">
+                        <at-avatar [size]="'s'" [image]="'assets/images/Info-Circle.svg'"></at-avatar>
+                    </div>
+                    <p class="at-prod-caption gray-letter until">Tienes hasta el 28/04/2021 para actualizar tus datos</p>
+                </div>
+            <div class="update-button">
+                <a href="/dashboard/my-account/update-data" class="at-btn at-btn-l un-btn-filled-tertiary at-prod-body-1 bold">
+                    Actualizar datos
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

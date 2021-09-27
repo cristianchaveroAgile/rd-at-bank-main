@@ -1,0 +1,129 @@
+@import 'at-digital-components/sass/index';
+@import '/src/assets/scss/main-styles';
+
+.tabs {
+  overflow: hidden;
+  padding-right: 2.225rem;
+  .tab {
+    padding: 0.313rem;
+    width: 100%;
+    overflow: hidden;
+    margin: 1rem 0;
+    box-sizing: border-box;
+    input {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+      &:checked {
+        + .tab-label {
+          &::after {
+            transform: rotate(0deg);
+          }
+        }
+        ~ .tab-content{
+          max-height: 100vh;
+          padding: .2rem 0 1.4rem 0;
+        }
+      }
+    }
+    &-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: .8rem;
+      div {
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 0.625rem;
+        }
+      }
+      &::after {
+        content: "";
+        width: 2.5rem;
+        height: 2.5rem;
+        background: url('/assets/images/chevron-down.svg') center center no-repeat;
+        text-align: center;
+        transition: all .35s;
+        color: $un-primary-60;
+        transform: rotate(-90deg);
+      }
+    }
+    &-content {
+      min-width: 100%;
+      max-height: 0px;
+      background: white;
+      transition: all .35s;
+      a {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.row-content {
+  .row {
+    display: flex;
+    overflow: auto;
+    padding-left: .25rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .row > {
+    .col {
+      &.c-80 {
+        width: 80%;
+      }
+    }
+  }
+  .tab-content {
+    padding: 0;
+  }
+  .tabs {
+    padding-right: 0;
+    .tab {
+      .tab-content {
+        .row-content {
+          margin-top: 0.4rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .tab-content {
+    padding: 0;
+  }
+  .tabs {
+    .tab {
+      input {
+        display: none;
+        &:checked {
+          ~ .tab-content{
+            padding: 1.875rem 0;
+          }
+        }
+      }
+      &-label {
+        pointer-events: none;
+        margin-bottom: .2rem;
+        &::after {
+          display: none;
+        }
+      }
+      &-content {
+        max-height: 100%;
+        padding: 1rem 0;
+        border: 0;
+      }
+    }
+  }
+  .row-content {
+    .row {
+      display: flex;
+      overflow: visible;
+      padding-left: 0rem;
+      flex-wrap: wrap;
+    }
+  }
+}

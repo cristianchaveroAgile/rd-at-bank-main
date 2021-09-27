@@ -1,0 +1,43 @@
+@import 'at-digital-components/sass/index';
+@import '/src/assets/scss/main-styles';
+
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    .body-menu {
+        flex: 1;
+        z-index: 100;
+    }
+    .content {
+        position: relative;
+        left: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+.main-content {
+    margin: 1.5rem 0 5.5rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .body {
+        .content {
+            margin-left: 14rem;
+            width: auto;
+        }
+    }
+    .main-content {
+        margin-bottom: 0;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .body {
+        .content {
+            margin-left: 19.6rem;
+        }
+    }
+}

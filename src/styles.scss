@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import 'assets/scss/variables.scss';
+body {
+    margin: 0;
+}
+body::ng-deep {
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+}
+.row > .col {
+    &.c-xs-4 {
+        width: 33.3333333333%!important;
+    }
+    &.c-xs-6 {
+        width: 50%!important;
+    }
+    &.c-xs-8 {
+        width: 66.6666666667%!important;
+    }
+}
+.row-xs {
+    display: flex!important;
+    flex-wrap: wrap!important;
+}
+.at-btn {
+    border-radius: .5rem!important;
+}
+.un-btn-filled-tertiary {
+    background-color: $un-primary-60;
+    &:hover, &:active {
+        background-color: $un-primary-70;
+    }
+}
+.un-btn-outline-tertiary {
+    background: transparent;
+    border: 2px solid $un-primary-60!important;
+    color: $un-primary-60!important;
+    &:hover, &:active {
+        background-color: $un-primary-20;
+    }
+}
+.at-form-field-underline {
+    color: $un-card-border;
+}
+@media screen and (max-width: 1023px) {
+    body .container {
+        margin: 0 1rem!important;
+        max-width: inherit!important;
+    }
+    .row > .col {
+        &.c-md-12 {
+            width: 100%!important;
+        }
+    }
+    .hidden-md {
+        display: none!important;
+    }
+    .card {
+        box-shadow: 0px 0px 0px 0px rgba($color: $un-shadow, $alpha: 0.2);
+        margin: 0;
+        padding: 0;
+    }
+    .section-content {
+        margin-bottom: 0!important;
+        margin-left: 0!important;
+        margin-right: 0!important;
+        min-height: inherit!important;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .row > .col {
+        &.title-col {
+            width: 37%!important;
+        }
+        &.progress-col {
+            width: 63%!important;
+        }
+    }
+}

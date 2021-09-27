@@ -1,0 +1,20 @@
+<!-- Clase hidden: No se muestra el subtítulo si la página no es Mi cuenta (home) y se ve en móviles. -->
+<div class="subtitle" [class]="{'hidden': !showSubtitle}">
+<!-- Si el usuario está en Mi cuenta (home), se muestra un ávatar genérico y el texto del subtítulo. -->
+    <ng-container *ngIf="isHome; else elseTemplate">
+        <at-avatar [size]="'l'" [image]="'assets/images/avatar1.svg'"></at-avatar>
+        <p class="at-prod-subtitle-1">Hola, <b>{{ pagSubtitle }}</b></p>
+    </ng-container>
+<!-- Si el usuario NO está en Mi cuenta (home), se muestra un ícono de back para regresar a home. -->
+    <ng-template #elseTemplate>
+        <div class="icon">
+            <a href="/dashboard/my-account">
+                <at-icon name="keyboard-backspace" [size]="'3x'"></at-icon>
+            </a>
+        </div>
+        <p class="at-prod-subtitle-1">Regresar a mi cuenta</p>
+    </ng-template>
+</div>
+<div class="hr-subtitle">
+    <hr />
+</div>

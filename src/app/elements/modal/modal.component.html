@@ -1,0 +1,9 @@
+<div class="overlay" [hidden]="!show" (click)="hidde($event)"></div>
+<div class="modal at-radius-s" [ngClass]="{'is-visible': show}">
+    <button class="at-btn at-btn-s at-btn-text-primary close" (click)="hidde($event)">
+      <at-icon name="close" [size]="'1.5x'"></at-icon>
+    </button>
+    <div class="at-prod-body-2">
+        <ng-content></ng-content>
+    </div>
+</div>

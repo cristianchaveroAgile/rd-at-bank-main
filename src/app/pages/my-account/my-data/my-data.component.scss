@@ -1,0 +1,104 @@
+@import 'at-digital-components/sass/index';
+@import '/src/assets/scss/main-styles';
+
+.gral-sec {
+    input {
+        color: black;
+    }
+}
+
+.col-content {
+    padding: 0.85rem 0.969rem 0 1.25rem;
+    .title {
+        margin: 0;
+        padding-bottom: 0.75rem;
+    }
+    .message {
+        padding-top: 1.625rem;
+    }
+}
+
+.r-box-container {
+    display: flex;
+}
+
+.separator {
+    background: $un-card-border;
+    width: 1px;
+    margin: 0.85rem 0;
+}
+
+.gray-letter {
+    color: $at-primary-50;
+}
+
+.until {
+    padding-left: 0.625rem;
+}
+
+.left-alert {
+    padding-top: 0.625rem;
+}
+
+.edit-alert {
+    padding-top: 1.063rem;
+    display: flex;
+    align-items: center;
+}
+
+.update-button {
+    padding: 1.5rem 0 0.6rem 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.left-box {
+    padding-right: 1.563rem;
+}
+
+.right-box {
+    padding-left: 2rem;
+    margin-left: 1px;
+    width: 100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1023px) {
+    .content {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        padding: 0;
+        margin: 1.25rem;
+    }
+    .card {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+    .gral-sec {
+        input {
+            color: black;
+        }
+    }
+    .col-content {
+        padding: 0;
+    }
+    .left-box {
+        padding-right: 0;
+    }
+    .right-box {
+        margin-left: 0;
+    }
+    .separator {
+        display: none;
+    }
+    .update-button {
+        margin-right: 8px;
+    }
+}

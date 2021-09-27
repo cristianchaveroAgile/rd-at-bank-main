@@ -1,0 +1,92 @@
+<app-title></app-title>
+<div class="content section-content">
+    <app-subtitle></app-subtitle>
+
+    <div class="container">
+        <div class="row">
+            <div class="col c-7">
+                    <div class="card at-radius-m">
+                        <p class="at-prod-h5">Actualiza tus datos de contacto</p>
+                        <form [formGroup]="form" (ngSubmit)="save($event)">
+                                <div class="row row-xs no-rouds">
+                                    <div class="col c-md-12 c-6 no-rouds">
+                                    <div class="separator">
+                                        <at-form-field [appearance]="'standard'" [theme]="'primary'"
+                                            class="at-form-field-label-float">
+                                            <div atLabel class="at-prod-caption">Teléfono</div>
+                                            <input type="tel" atInput class="at-prod-body-1" formControlName="telefono" (keyup)="format($event)">
+                                            <div atSupport *ngIf="form.get('telefono').errors && form.get('telefono').touched" class="error at-prod-caption">
+                                                <div *ngIf="form.get('telefono').errors.minlength || form.get('telefono').errors.maxlength">
+                                                    Debe de contener 12 dígitos
+                                                </div>
+                                            </div>
+                                        </at-form-field>
+                                    </div>
+                                    </div>
+                                    <div class="col c-md-12 c-6 no-rouds">
+                                    <div class="right-input">
+                                        <at-form-field [appearance]="'standard'" [theme]="'primary'"
+                                            class="at-form-field-label-float">
+                                            <div atLabel class="at-prod-caption">Correo</div>
+                                            <input type="text" class="at-prod-body-1" atInput formControlName="email">
+                                            <div atSupport *ngIf="form.get('email').errors && form.get('email').touched" class="error at-prod-caption">
+                                                <div *ngIf="form.get('email').errors.email">
+                                                    Correo electrónico no válido
+                                                </div>
+                                            </div>
+                                        </at-form-field>
+                                    </div>
+                                    </div>
+                                </div>
+                            <p class="at-prod-body-2 conserv-comment">
+                                Si deseas mantener el número {{phone}} y tu correo {{client.correo_1}} como datos
+                                principales de contacto, da click en Conservar.
+                            </p>
+                            <hr />
+                            <div class="buttons">
+                                <div class="button button-left">
+                                    <a href="/dashboard/my-account" class="at-btn at-btn-l un-btn-outline-tertiary at-prod-body-1 bold">Conservar</a>
+                                </div>
+                                <div class="button">
+                                    <button class="at-btn at-btn-l un-btn-filled-tertiary at-prod-body-1 bold" type="submit">Actualizar datos</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+            <div class="col c-4 hidden-md">
+                    <div class="flex-column-center advice at-radius-m">
+                        <div class="icon">
+                            <img src="assets/images/RocketLaunch.svg" />
+                        </div>
+                        <p class="at-prod-body-1 adv-1 bold">
+                            ¡Te haremos llegar grandes oportunidades para hacer crecer tu empresa!
+                        </p>
+                        <p class="at-prod-body-2 adv-2">
+                            Mantén tus datos actualizados
+                        </p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-modal [show] ="show">
+  <img src="assets/images/succesfull.svg" class="successfull">
+  <p class="at-prod-subtitle-2 bold">
+    Tus datos se han actualizado
+  </p>
+  <a href="/dashboard/my-account/" class="at-btn at-btn-l un-btn-filled-tertiary at-prod-body-1 btn-full-width bold">
+    Aceptar
+  </a>
+</app-modal>
+
+<app-modal [show] ="error">
+  <img src="assets/images/cancelar.svg" class="successfull">
+  <p class="at-prod-subtitle-2 bold">
+    {{errorMessage}}
+  </p>
+  <button class="at-btn at-btn-l un-btn-filled-tertiary at-prod-body-1 btn-full-width bold" (click)="hide()">
+    Aceptar
+  </button>
+</app-modal>
